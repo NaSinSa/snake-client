@@ -28,13 +28,13 @@ const connect = function() {
   //   }, 700);
   // });
 
-  for (let i = 0; i < 10; i++) {
-    conn.on('connect' , () => {
-      setTimeout(() => {
-        conn.write("Move: left")
-      }, i)
-    })
-  }
+  // for (let i = 0; i < 5; i++) {
+  //   conn.on('connect' , () => {
+  //     setTimeout(() => {
+  //       conn.write("Move: left")
+  //     }, i)
+  //   })
+  // }
 
   
   conn.on('data', (data) => {
