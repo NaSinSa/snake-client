@@ -7,6 +7,10 @@ const connect = function() {
     port: 50541
   });
   conn.setEncoding('utf8'); 
+  conn.on('connect', () => {
+    console.log('Enter to Win')
+    conn.write('Name: WIN')
+  });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
